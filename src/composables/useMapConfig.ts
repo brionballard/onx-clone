@@ -15,7 +15,7 @@ export function useMapConfig() {
     const mapConfig: MapConfigOptions = reactive({
         zoom: 15,
         center: {lat: 39.50, lng: -98.35}, // Longitude, Latitude
-        mapStyle: 'mapbox://styles/mapbox/streets-v11',
+        mapStyle: 'mapbox://styles/mapbox/satellite-v9',
     });
 
     // Methods to update map config
