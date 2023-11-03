@@ -8,12 +8,12 @@
 </template>
 
 <script lang="ts">
-import {defineComponent} from "vue";
+import {defineComponent, ref} from "vue";
 import SearchIcon from "@/components/icons/SearchIcon.vue";
 
 export default defineComponent({
   name: 'MapSearchBar',
-  components: {SearchIcon}
+  components: {SearchIcon},
 })
 </script>
 
@@ -51,6 +51,5 @@ export default defineComponent({
 .map-search:focus {
   outline: none;
 }
-
 
 </style>

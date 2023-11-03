@@ -22,7 +22,7 @@
         <UpArrowIcon v-if="showSettingLinks"/>
         <DownArrowIcon v-if="!showSettingLinks" />
       </button>
-      <div class="nav-settings-links" v-if="!showSettingLinks">
+      <div class="nav-settings-links" v-if="showSettingLinks">
         <button>
           <UserIcon />
           <span><router-link to="/hunt/map/account/overview">My Account</router-link></span>
@@ -71,7 +71,7 @@ export default defineComponent({
     DownArrowIcon,
     UpArrowIcon,
     SDCardIcon,
-    PrintIcon, InviteFriendsIcon, SettingsIcon, Settings, UserIcon, ContentIcon, Content, Logo, OfflineIcon},
+    PrintIcon, InviteFriendsIcon, SettingsIcon, UserIcon, ContentIcon, Logo, OfflineIcon},
   data(vm) {
     return {
       showSettingLinks: false

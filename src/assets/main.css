@@ -4,3 +4,18 @@
   max-width: 100%;
   display: flex;
 }
+
+.header {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.25rem;
+  letter-spacing: -.02em;
+}
+
+.slideFade-enter-active, .slideFade-leave-active {
+  transition: all .3s ease;
+}
+.slideFade-enter-from, .slideFade-leave-to {
+  transform: translateY(1%);
+  opacity: 0;
+}

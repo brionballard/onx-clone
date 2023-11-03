@@ -24,5 +24,6 @@ export default defineComponent({
   left: 120px;
   margin: 0 -10px;
   display: flex;
+  gap: 8px;
 }
 </style>
