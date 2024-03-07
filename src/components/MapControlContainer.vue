@@ -5,14 +5,9 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import MapSearchBar from "@/components/controls/MapSearchBar.vue";
-import {defineComponent} from "vue";
 import LayersButton from "@/components/controls/LayersButton.vue";
-export default defineComponent({
-  name: 'MapControlContainer',
-  components: {LayersButton, MapSearchBar}
-});
 </script>
 
 <style scoped>

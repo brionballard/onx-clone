@@ -43,8 +43,8 @@
   </ActionPanel>
 </template>
 
-<script lang="ts">
-import {defineComponent} from "vue";
+<script setup lang="ts">
+import { ref } from "vue";
 import LayersIcon from "@/components/icons/LayersIcon.vue";
 import ActionPanel from "@/components/ActionPanel.vue";
 import ActiveIcon from "@/components/icons/ActiveIcon.vue";
@@ -87,27 +87,16 @@ const layers = [
   }
 ]
 
-export default defineComponent({
-  name: 'LayersButton',
-  components: {RightArrowIcon, ActiveIcon, ActionPanel, LayersIcon},
-  data() {
-    return {
-      isOpen: false,
-      layers
-    }
-  },
-  methods: {
-    toggle() {
-      this.isOpen = !this.isOpen;
-    }
-  }
-});
+let isOpen = ref(false)
+
+function toggle () {
+  isOpen.value = !isOpen.value;
+}
 </script>
 
 <style>
 .layer-button-container {
   position: relative;
-  display: inline-block;
   height: 50px;
   border-radius: 8px;
   box-shadow: var(--shadow);

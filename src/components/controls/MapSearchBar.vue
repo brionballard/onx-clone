@@ -7,14 +7,8 @@
   </div>
 </template>
 
-<script lang="ts">
-import {defineComponent, ref} from "vue";
+<script setup lang="ts">
 import SearchIcon from "@/components/icons/SearchIcon.vue";
-
-export default defineComponent({
-  name: 'MapSearchBar',
-  components: {SearchIcon},
-})
 </script>
 
 <style>

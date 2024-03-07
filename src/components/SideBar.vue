@@ -49,15 +49,13 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
+<script setup lang="ts">
+import { ref} from 'vue';
 
 import OfflineIcon from "@/components/icons/OfflineIcon.vue";
 import Logo from "@/components/icons/Logo.vue";
-import Content from "@/components/icons/ContentIcon.vue";
 import ContentIcon from "@/components/icons/ContentIcon.vue";
 import UserIcon from "@/components/icons/UserIcon.vue";
-import Settings from "@/components/icons/SettingsIcon.vue";
 import SettingsIcon from "@/components/icons/SettingsIcon.vue";
 import InviteFriendsIcon from "@/components/icons/InviteFriendsIcon.vue";
 import PrintIcon from "@/components/icons/PrintIcon.vue";
@@ -65,30 +63,18 @@ import SDCardIcon from "@/components/icons/SDCardIcon.vue";
 import UpArrowIcon from "@/components/icons/UpArrowIcon.vue";
 import DownArrowIcon from "@/components/icons/DownArrowIcon.vue";
 
-export default defineComponent({
-  name: 'NavigationBar',
-  components: {
-    DownArrowIcon,
-    UpArrowIcon,
-    SDCardIcon,
-    PrintIcon, InviteFriendsIcon, SettingsIcon, UserIcon, ContentIcon, Logo, OfflineIcon},
-  data(vm) {
-    return {
-      showSettingLinks: false
-    }
-  },
-  methods: {
-  toggleSettingsMenu() {
-    this.showSettingLinks = !this.showSettingLinks; // This method toggles the state
-  }
+let showSettingLinks = ref(false)
+
+function toggleSettingsMenu() {
+  showSettingLinks.value = !showSettingLinks.value; // This method toggles the state
 }
-});
 </script>
 
 <style scoped>
 .nav-container {
-  position: relative;
+  position: absolute;
   width: 100px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: white;

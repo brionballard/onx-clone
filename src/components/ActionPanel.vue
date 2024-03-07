@@ -9,33 +9,28 @@
         </div>
       </header>
       <slot>
-        <!--   Children   -->
+        <!-- Children -->
       </slot>
     </div>
   </transition>
 </template>
 
-<script lang="ts">
-import {defineComponent} from "vue";
-import XIcon from "@/components/icons/XIcon.vue";
+<script setup lang="ts">
+import XIcon from '@/components/icons/XIcon.vue';
 
-export default defineComponent({
-  name: 'ActionPanel',
-  components: {XIcon},
-  props: {
-    open: {
-      type: Boolean,
-      required: true
-    },
-    setOpen: {
-      type: Function,
-      required: true
-    }
+defineProps({
+  open: {
+    type: Boolean,
+    required: true
   },
-})
+  setOpen: {
+    type: Function,
+    required: true
+  }
+});
 </script>
 
-<style>
+<style scoped>
 .action_panel {
   --card-top-offset: 75px;
   --card-bottom-offset: 20px;
@@ -70,5 +65,4 @@ export default defineComponent({
   background: transparent;
   border: none;
 }
-
 </style>

@@ -10,5 +10,11 @@
     {
       "path": "./tsconfig.vitest.json"
     }
-  ]
+  ],
+  "compilerOptions": {
+    // Other options...
+    "types": ["mapbox-gl"],
+    // OR
+    // "typeRoots": ["node_modules/@types", "node_modules/mapbox-gl"],
+  }
 }

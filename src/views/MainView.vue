@@ -1,14 +1,12 @@
 <template>
-  <NavigationBar />
-  <MapContainer />
-  <MapControlContainer />
+    <SideBar />
+    <MapInitializer />
 </template>
 
 
 <script setup lang="ts">
-import NavigationBar from "@/components/Navigation.vue";
-import MapContainer from "@/components/MapContainer.vue";
-import MapControlContainer from "@/components/MapControlContainer.vue";
+import MapInitializer from '@/components/MapInitializer.vue';
+import SideBar from "@/components/SideBar.vue";
 </script>
 
 
